@@ -1,11 +1,6 @@
 #include <stdio.h>
 
 /* Entry point of the program.*/
-
-/**
- * function main 
- * @return 0 upon successful execution.
- */
 int main(void)
 {
 	/*Your code here*/
