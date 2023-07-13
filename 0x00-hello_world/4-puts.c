@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-/**
- * Entry point of the program.
- *
- * @return 0 upon successful execution.
- */
+/* Entry point of the program.*/
+
+/*@return 0 upon successful execution.*/
 int main(void)
 {
 	/*Your code here*/
