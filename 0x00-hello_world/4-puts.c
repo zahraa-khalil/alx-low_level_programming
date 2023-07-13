@@ -2,7 +2,10 @@
 
 /* Entry point of the program.*/
 
-/*@return 0 upon successful execution.*/
+/**
+ * function main 
+ * @return 0 upon successful execution.
+ */
 int main(void)
 {
 	/*Your code here*/
