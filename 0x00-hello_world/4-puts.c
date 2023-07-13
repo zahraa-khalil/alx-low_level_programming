@@ -1,8 +1,14 @@
 #include <stdio.h>
 
-int main(void) 
+/**
+ * Entry point of the program.
+ * Returns 0 upon successful execution.
+ */
+
+int main(void)
 {
-	const char* string = "\"Programming is like building a multilingual puzzle";
+	const char * string = "\"Programming is like building a multilingual puzzle";
+
 	puts(string);
 	return (0);
 }
