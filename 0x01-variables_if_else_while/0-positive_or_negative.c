@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - print whether the number stored in the variable n 
+ * main - print whether the number stored in the variable n
  * is positive or negative.
  * Return: Always The number, followed by string
  */
