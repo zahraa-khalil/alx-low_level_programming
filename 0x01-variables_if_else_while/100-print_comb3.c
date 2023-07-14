@@ -15,6 +15,10 @@ int main(void)
 		{
 			putchar('0' + n);
 			putchar('0' + j);
+			if (n == 8 && j == 9)
+			{
+				continue;
+			}
 			putchar(',');
 			putchar(' ');
 		}
