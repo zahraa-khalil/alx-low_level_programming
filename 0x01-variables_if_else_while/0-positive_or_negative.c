@@ -5,9 +5,9 @@
 
 /* betty style doc for function main goes there */
 /**
- *This programme assign a random number to the variable n
- * each time it is executed.
- * print whether the number stored in the variable n is positive or negative.
+ * main - print whether the number stored in the variable n 
+ * is positive or negative.
+ * Return: Always The number, followed by string
  */
 int main(void)
 {
