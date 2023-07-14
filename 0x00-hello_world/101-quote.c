@@ -8,7 +8,7 @@
 int main(void)
 
 {
-	fput("that piece of art is useful\n- Dora Korpar, 2015-10-19\n", stdout;
+	fputs("that piece of art is useful\n- Dora Korpar, 2015-10-19\n", stdout;
  	write(1, message, strlen(message));
 	return (1);
 }
