@@ -18,13 +18,11 @@ int main(void)
 			putchar(' ');
 			putchar('0' + j / 10);
 			putchar('0' + j % 10);
-			if (n == 98 && j == 99)
+			if (n < 98 || j < 99)
 			{
-				continue;
-			}
-			putchar(',');
-			putchar(' ');
-		}
+				putchar(',');
+				putchar(' ');
+		}	}
 	}
 	putchar('\n');
 
