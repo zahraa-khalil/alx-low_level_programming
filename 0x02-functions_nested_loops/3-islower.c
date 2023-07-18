@@ -2,12 +2,18 @@
 
 /**
  *_islower - checks for lowercase character.
- *Return: Always void
+ *Return: Always number
  */
 
-int _islower(int c);
+int _islower(int c)
 {
-	if (c )
 
-	_putchar('\n');
+	if (c >= 79 && c <= 122)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
