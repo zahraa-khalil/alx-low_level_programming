@@ -2,15 +2,15 @@
 
 /**
  *print_last_digit:  prints the last digit of a number.
- *@i: number to be checked
+ *@n: number to be checked 
  *Return: Always value of the last digit
  */
 
 int print_last_digit(int i)
 {
-        int n;
+	int n;
 
-        n= i%10;
+	n = i % 10;
 
 	if (n < 0)
 	{
