@@ -10,7 +10,7 @@ void print_times_table(int n)
 {
 	int num, multiplied, res;
 
-	if (n >= 15 || n <= 0)
+	if (n > 15 || n < 0)
 	{
 		return;
 	}
@@ -45,7 +45,6 @@ void print_times_table(int n)
 					_putchar((res % 10) + '0');
 				}
 			}
-
 			_putchar('\n');
 		}
 	}
