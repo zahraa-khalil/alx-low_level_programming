@@ -3,7 +3,6 @@
 /**
 *print_last_digit - function that print last digit of a number
 *@i: number to be targeted
-n to be declared
 *Return: returns 0
 */
 
