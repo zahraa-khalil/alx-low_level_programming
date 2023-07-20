@@ -2,7 +2,7 @@
 
 /**
 *print_line - prints a straight line in the terminal.
-*@n -  number of times
+*@n -  is the integer for the paramaters of my function
 *Return: Always void
 */
 
