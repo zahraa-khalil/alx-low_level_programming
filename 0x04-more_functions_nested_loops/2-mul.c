@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *mul - check for digit 0 to 9
- *@a: int to be checked
- *@b: int to be checked
+ *mul - function multiplies two integers
+ *@a: int parameter
+ *@b: int parameter
  *Return: a * b
  */
 
