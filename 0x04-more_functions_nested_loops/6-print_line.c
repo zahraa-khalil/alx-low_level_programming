@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-*print_line - prints a straight line in the terminal.
-*@n -  is the integer for the paramaters of my function
+*print_line - prints a straight line in the terminal
+*@n: int parameter
 *Return: Always void
 */
 
