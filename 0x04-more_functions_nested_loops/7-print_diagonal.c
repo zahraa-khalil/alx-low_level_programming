@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *print_diagonal - prints a diagonal line in the terminal
- *@n: int parameter
- *Return: Always void
- */
+*print_diagonal - prints a diagonal line in the terminal
+*@n: int parameter
+*Return: Always void
+*/
 
 void print_diagonal(int n)
 {
