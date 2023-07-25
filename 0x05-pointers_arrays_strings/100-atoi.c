@@ -12,20 +12,23 @@ int _atoi(char *s)
 
     int i = 0;
     int result = 0;
+
+
     while (s[i] != '\0')
     {
         if (s[i] >= '0' && s[i] <= '9')
         {
-            result = ((s[i - 1] - '0'));
+            result = ((s[i] - '0'));
             printf("%d", result);
+
+            i++;
+     
         }
         else
         {
-            return(0);
+            return (0);
         }
-
-        i++;
     }
-
-    return (0);
+    printf("\n");
+    return (0) ;
 }
