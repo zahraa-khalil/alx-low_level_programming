@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *_puts -  f function that prints n elements of an array of integers
+ *print_array -  f function that prints n elements of an array of integers
  *@a: char to be checked
  *@n: char to be checked
  *Return: nothing
