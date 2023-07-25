@@ -29,6 +29,5 @@ int _atoi(char *s)
             return (0);
         }
     }
-    printf("\n");
     return (0) ;
 }
