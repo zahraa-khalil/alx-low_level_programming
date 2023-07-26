@@ -29,7 +29,7 @@ int _atoi(char *s)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			result = result *10 + (s[i] - '0');
+			result = result * 10 + (s[i] - '0');
 			i++;
 		}
 		else
@@ -38,5 +38,5 @@ int _atoi(char *s)
 		}
 	}
 
-	return (result *sign);
+	return (result * sign);
 }
