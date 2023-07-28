@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- **_strcat -function that concatenates two strings.
+ **_strncat -function that concatenates two strings.
  *@dest: Pointer to the destination buffer where the result will be stored.
  *@src: Pointer to the source string that will be appended to dest.
  *@n: int n bytes from src.
@@ -19,16 +19,10 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 	}
 
-	while (src[j] != '\0')
+	while (src[j] != '\0' && j < n)
 	{
 		dest[i + j] = src[j];
 		j++;
-	}
-
-	if (src[j] >= n) {}
-	else
-	{
-		dest[i + j] = '\0';
 	}
 
 	return (dest);
