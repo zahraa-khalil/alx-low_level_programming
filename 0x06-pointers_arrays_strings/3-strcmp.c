@@ -1,28 +1,19 @@
 #include "main.h"
 
 /**
- **_strncpy -function that copies a string.
- *@dest: Pointer to the destination buffer where the result will be stored.
- *@src: Pointer to the source string that will be appended to dest.
- *@n: int n bytes from src.
- *Return: a pointer to the resulting string dest
+ *_strcmp -function that copies a string.
+ *@s1: Pointer to first string to compare
+ *@s2: Pointer to second string to compare
+ *Return: integer comparison
  */
 
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-
-	while (src[i] != '\0' && src[i] <= n)
+	while (*s1 != '\0' && *s1 == *s2)
 	{
-		dest[i] = src[i];
-        i++;
+		s1++;
+		s2++;
 	}
-    
-    //  while (i < n)
-    // {
-    //     dest[i] = '\0';
-    //     i++;
-    // }
 
-	return (dest);
+	return (*s1 - *s2);
 }
