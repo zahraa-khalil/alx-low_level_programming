@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- **_strncpy -function that concatenates two strings.
+ **_strncpy -function that copies a string.
  *@dest: Pointer to the destination buffer where the result will be stored.
  *@src: Pointer to the source string that will be appended to dest.
  *@n: int n bytes from src.
