@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- **_strncpy -function that concatenates two strings.
+ **_strncpy -function that copies a string.
  *@dest: Pointer to the destination buffer where the result will be stored.
  *@src: Pointer to the source string that will be appended to dest.
  *@n: int n bytes from src.
@@ -11,25 +11,14 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
-	int j = 0;
 
-	while (dest[i] != '\0')
+	while (src[i] != '\0' && i < n)
 	{
-		dest[i] = dest[i];
-		i++;
+		dest[i] = src[i];
+        i++;
 	}
-
-	while (src[j] != '\0')
-	{
-		dest[i + j] = src[j];
-		j++;
-	}
-
-	if (src[j] >= n) {}
-	else
-	{
-		dest[i + j] = '\0';
-	}
+    
+ 
 
 	return (dest);
 }
