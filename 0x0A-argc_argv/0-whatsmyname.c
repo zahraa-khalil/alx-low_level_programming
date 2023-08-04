@@ -1,11 +1,14 @@
 #include <stdio.h>
 
 /**
- *main - print the alphabet in lowercase, followed by a new line.
- *Return: Always alphabet in lowercase, followed by a new line
+ *main - this is a function to print its name
+ *@argc: argc parameter
+ *@argv: an array of a command listed
+ *Return: 0 for success
  */
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-    printf("%s\n", argv[0]);
+	printf("%s\n", argv[0]);
+	return (0);
 }
