@@ -1,24 +1,26 @@
 #include "main.h"
 
-/**
- *_strspn - function that gets the length of a prefix substring.
- *@s: source memory area
- *@dest: memory area destination
- *@n: bytes of the memory area to be copied.
- *Return: number of bytes in the initial segment of s which consist only of bytes from accept
- */
 
+/**
+ * _strspn - prints the consecutive caracters of s1 that are in s2.
+ * @s: source string
+ * @accept: searching string
+ *
+ * Return: new string.
+ */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0;
+	unsigned int i, j;
 
-	// while (i < n)
-	// {
-	// 	dest[i] = src[i];
-	// 	i++;
-	// }
-
-	return (i);
-
+	for (j = 0; *(s + j); j++)
+	{
+		for (i = 0; *(accept + i); i++)
+		{
+			if (*(s + j) == *(accept + i))
+				break;
+		}
+	if (*(accept + i) == '\0')
+		break;
+	}
+	return (j);
 }
-
