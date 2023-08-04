@@ -34,7 +34,10 @@ int main(int argc, char *argv[])
 
 		for (i = 1; i < argc; i++)
 		{
-			sum += atoi(argv[i]);
+			if (atoi(argv[i]) >= 0)
+			{
+				sum += atoi(argv[i]);
+			}
 		}
 
 		printf("%d\n", sum);
