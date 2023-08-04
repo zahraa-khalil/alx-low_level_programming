@@ -10,38 +10,40 @@
 
 int main(int argc, char *argv[])
 {
-	int sum = 0;
-	int i, j;
+    int sum = 0;
 
-	if (argc <= 1)
-	{
-		printf("0\n");
-		return (1);
-	}
-	else
-	{
-		for (i = 1; i < argc; i++)
-		{
-			for (j = 0; argv[i][j] != '\0'; j++)
-			{
-				if (argv[i][j] < '0' || argv[i][j] > '9')
-				{
-					printf("Error\n");
-					return (1);
-				}
-			}
-		}
+    int i, j, positive_num;
 
-		for (i = 1; i < argc; i++)
-		{
-			if (atoi(argv[i]) >= 0)
-			{
-				sum += atoi(argv[i]);
-			}
-		}
+    if (argc <= 1)
+    {
+        printf("0\n");
+        return (1);
+    }
+    else
+    {
+        for (i = 1; i < argc; i++)
+        {
+            for (j = 0; argv[i][j] != '\0'; j++)
+            {
+                if (argv[i][j] < '0' || argv[i][j] > '9')
+                {
+                    printf("Error\n");
+                    return (1);
+                }
+            }
+        }
 
-		printf("%d\n", sum);
-	}
+        for (i = 1; i < argc; i++)
+        {
+            positive_num = atoi(argv[i]);
+            if (positive_num >= 0)
+            {
+                sum += atoi(argv[i]);
+            }
+        }
 
-	return (0);
+        printf("%d\n", sum);
+    }
+
+    return (0);
 }
