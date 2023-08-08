@@ -12,31 +12,31 @@
 
 char *create_array(unsigned int size, char c)
 {
-    char *arr;
-    unsigned int i;
+	char *arr;
+	unsigned int i;
 
-    if (size > 0)
-    {
-        arr = (char *)malloc(size * sizeof(char));
-        // pointer now points to the memory location
-        // where space for size chars has been allocated on the heap.
-        if (arr != NULL)
-        {
-            // assign c to first char in the array
-            for (i = 0; i < size; i++)
-            {
-                arr[i] = c;
-            }
-        }
-        else
-        {
-            return (NULL);
-        }
+	if (size > 0)
+	{
+		arr = (char*) malloc(size* sizeof(char));
+		// pointer now points to the memory location
+		// where space for size chars has been allocated on the heap.
+		if (arr != NULL)
+		{
+			// assign c to first char in the array
+			for (i = 0; i < size; i++)
+			{
+				arr[i] = c;
+			}
+		}
+		else
+		{
+			return (NULL);
+		}
 
-        return arr;
-    }
-    else
-    {
-        return (NULL);
-    }
+		return arr;
+	}
+	else
+	{
+		return (NULL);
+	}
 }
