@@ -35,7 +35,8 @@ char *_strdup(char *str)
 		{
 			p = dup;
 			while (*str)
-			{ 	*p++ = *str++;
+            {
+                *p++ = *str++;
 			}
 
 			*p = 0;
