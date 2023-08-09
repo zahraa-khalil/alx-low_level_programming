@@ -4,7 +4,8 @@
 #include <string.h>
 
 /**
- **create_array - function that returns a pointer to a newly allocated space in memory
+ **_strdup - function that returns a pointer to a newly allocated
+ * space in memory, which contains a copy of the string given as a parameter.
  *it with a specific char.
  *@str: string to allocate
  *Return: a pointer or null on failure
@@ -34,7 +35,8 @@ char *_strdup(char *str)
 		{
 			p = dup;
 			while (*str)
-			{ 	*p++ = *str++;
+			{ 	
+                *p++ = *str++;
 			}
 
 			*p = 0;
