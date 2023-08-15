@@ -5,8 +5,6 @@
 /**
  *struct dog - dog structure
  *@name structure member for dog name
- *@age structure member for dog age
- @owner structure member for dog owner
  */
 
 struct dog {
