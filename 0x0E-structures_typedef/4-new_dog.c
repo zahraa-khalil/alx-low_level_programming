@@ -10,9 +10,10 @@
  *@owner: - structure member for dog owner
  *Return: NULL if the function fails
  */
-dog_t* new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newDog = malloc(sizeof(dog_t));
+
 	if (newDog == NULL)
 	{
 		return (NULL);
