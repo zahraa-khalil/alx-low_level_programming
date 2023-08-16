@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 /**
- *print_dog - function that initialize a variable of type struct dog
- *@d: variable
+ *print_dog - function that prints a struct dog
+ *@d: Pointer to struct
+ * Returns: nothing
  */
 void print_dog(struct dog *d)
 {
