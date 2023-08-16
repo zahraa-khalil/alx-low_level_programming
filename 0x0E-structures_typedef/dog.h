@@ -3,17 +3,19 @@
 
 /**
  *struct dog - dog structure
- *@name structure member for dog name
- *@age structure member for dog age
- @owner structure member for dog owner
+ *@name: structure member for dog name
+ *@age: structure member for dog age
+ *@owner: - structure member for dog owner
  */
 
+typedef struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+}
 
 
-typedef struct dog {
-    char *name;
-    float age;
-    char *owner;
-} my_dog;
+
 
 #endif
