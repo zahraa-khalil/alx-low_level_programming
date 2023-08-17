@@ -8,7 +8,6 @@
  * the given operator.
  * @argc: number of agruments
  * @argv: the string value of the arguments.
- *
  * Return: 0 (on Sucess)
  */
 int main(int argc, char *argv[])
