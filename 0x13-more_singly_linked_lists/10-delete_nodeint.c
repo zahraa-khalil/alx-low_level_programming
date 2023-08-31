@@ -3,14 +3,15 @@
 /**
  *delete_nodeint_at_index- function that frees a list_t list.
  *@head: A pointer to the head of the linked list.
- *Return: the head node’s data (n).
+ *@index: The index
+ *Return: 1 if it succeeded, -1 if it failed
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t * temp;
+	listint_t *temp;
 	unsigned int i;
-	listint_t * node_to_delete;
+	listint_t *node_to_delete;
 
 	if (*head == NULL)
 	{
@@ -28,7 +29,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		if (temp == NULL || temp->next == NULL)
 		{
-			return -1;
+			return (-1);
 		}
 
 		temp = temp->next;
@@ -36,5 +37,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	temp->next = node_to_delete->next;
 	free(node_to_delete);
-	return 1;
+	return (1);
 }
