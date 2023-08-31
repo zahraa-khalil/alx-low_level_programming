@@ -1,41 +1,47 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
- *delete_nodeint_at_index- function that frees a list_t list.
- *@head: A pointer to the head of the linked list.
- *@index: The index
- *Return: 1 if it succeeded, -1 if it failed
+ * delete_nodeint_at_index - function with two arguments
+ * @head: pointer to head pointer of first node in a linked list
+ * @index: element index in a linked list
+ *
+ * Description: deletes the node at index of a linked list
+ * Return: 1 if succeeded or -1 if fail
  */
-
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp;
-	unsigned int i;
-	listint_t *node_to_delete;
+	listint_t *cursor, *c_next;
+	unsigned int count = 0;
 
-	if (*head == NULL)
-	{
+	cursor = *head;
+
+	if (head == NULL || *head == NULL)
 		return (-1);
-	}
 
-	if (*head == 0)
+	if (index == 0)
 	{
-		*head = (*head)->next;
-		free(temp);
+		*head = cursor->next;
+		free(cursor);
 		return (1);
 	}
-
-	for (i = 0; i < index - 1; i++)
+	if (index == 1)
 	{
-		if (temp == NULL || temp->next == NULL)
-		{
-			return (-1);
-		}
-
-		temp = temp->next;
+		cursor = (*head)->next;
+		(*head)->next = cursor->next;
+		free(cursor);
+		return (1);
 	}
+	while (count < index - 1)
+	{
+		if (cursor->next == NULL)
+			return (-1);
+		count++;
+		cursor = cursor->next;
+		c_next = cursor->next;
+	}
+	cursor->next = c_next->next;
+	free(c_next);
 
-	temp->next = node_to_delete->next;
-	free(node_to_delete);
 	return (1);
 }
