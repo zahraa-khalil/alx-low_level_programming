@@ -10,7 +10,19 @@ int create_file(const char *filename, char *text_content)
 {
 	size_t text_length;
 	ssize_t bytes_written;
+    int i = 0, file;
 
+	if (filename == NULL)
+		return (-1);
+
+	if (text_content == NULL)
+		text_content = "";
+
+    while (text_content[i] != '\0')
+	{
+		i++;
+	}
+    
 	int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0666);
 
 	if (fd == -1)
@@ -26,6 +38,7 @@ int create_file(const char *filename, char *text_content)
 		close(fd);
 		return (-1);
 	}
+    write(file, text_content, i);
 
 	close(fd);
 	return (0);
