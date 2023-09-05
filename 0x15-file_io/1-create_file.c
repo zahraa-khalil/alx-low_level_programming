@@ -8,9 +8,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	size_t text_length;
-	ssize_t bytes_written;
-    int i = 0, file;
+	int i = 0, file;
 
 	if (filename == NULL)
 		return (-1);
@@ -18,28 +16,18 @@ int create_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		text_content = "";
 
-    while (text_content[i] != '\0')
+
+	while (text_content[i] != '\0')
 	{
 		i++;
 	}
-    
-	int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0666);
 
-	if (fd == -1)
-	{
+	file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+
+	if (file == -1)
 		return (-1);
-	}
 
-	text_length = strlen(text_content);
-	bytes_written = write(fd, text_content, text_length);
+	write(file, text_content, i);
 
-	if (bytes_written == -1)
-	{
-		close(fd);
-		return (-1);
-	}
-    write(file, text_content, i);
-
-	close(fd);
-	return (0);
+	return (1);
 }
