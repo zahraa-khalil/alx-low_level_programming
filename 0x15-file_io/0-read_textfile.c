@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- *ssize_t read_textfile- function that reads a text file and prints it to the POSIX standard output.
+ *read_textfile- reads a text file and prints it to the POSIX
  *@letters: number of letters it should read and print
- *Return: actual number of letters it could read and print or 0 if file can not be opened or read
- *if filename is NULL return 0
- *if write fails or does not write the expected amount of bytes, return 0
+ *@filename: the name of the file
+ *Return: actual number of letters it could read and print or 0
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -25,11 +24,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	buf = (char*) malloc(letters* sizeof(char));
+	buf = (char *) malloc(letters * sizeof(char));
 
 	if (buf == NULL)
 	{
-		close(fd);
 		return (0);
 	}
 
@@ -38,7 +36,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fileData == -1)
 	{
 		free(buf);
-		close(fd);
 		return (0);
 	}
 
