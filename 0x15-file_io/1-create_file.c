@@ -9,30 +9,25 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd, ppwrite, length = 0;
+	int fd, length = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (text_content == NULL)
+		text_content = "";
+
+	while (text_content[length] != '\0')
+		length++;
+
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	if (fd == -1)
 	{
 		return (-1);
 	}
 
-	while (text_content[length] != '\0')
-		length++;
-
-	ppwrite = write(STDOUT_FILENO, text_content, length);
-
-	if (ppwrite == -1)
-	{
-		close(fd);
-		return (-1);
-	}
-
-	close(fd);
+	write(STDOUT_FILENO, text_content, length);
 
 	return (1);
 }
