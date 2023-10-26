@@ -1,5 +1,10 @@
 {
     "files.associations": {
-        "main.h": "c"
+        "main.h": "c",
+        "function_pointers.h": "c",
+        "variadic_functions.h": "c",
+        "lists.h": "c",
+        "sstream": "c",
+        "__node_handle": "c"
     }
 }
