@@ -27,7 +27,10 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	write(STDOUT_FILENO, text_content, length);
+	write(fd, text_content, length);
+
+
+	close(fd);
 
 	return (1);
 }
