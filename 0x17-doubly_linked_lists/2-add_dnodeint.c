@@ -8,7 +8,7 @@
  *Return: the number of nodes
  */
 
-dlistint_t* add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new = malloc(sizeof(dlistint_t));
 
@@ -18,7 +18,7 @@ dlistint_t* add_dnodeint(dlistint_t **head, const int n)
 	new->n = n;
 	new->prev = NULL;
 
-	if (! *head)
+	if (!*head)
 	{
 		*head = new;
 		new->next = NULL;
