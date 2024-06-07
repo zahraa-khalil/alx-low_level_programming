@@ -11,7 +11,7 @@ def island_perimeter(grid):
     Args:
     grid (list of lists of int): A rectangular grid where 1 represents land
                                  and 0 represents water. The grid cells are
-                                 connected horizontally/vertically (not diagonally).
+                                 connected horizontally/vertically.
 
     Returns:
     int: The perimeter of the island.
